@@ -15,6 +15,7 @@ app.config(['$routeProvider',function($routeProvider){
 app.controller('indexCtrl',['$scope','$http','$window','change',function($scope,$http,$window,change){
 	// $routeParams是用于获取
 	// 初始化offset值为10
+	$scope.loadmore = false;
 	$scope.offset = 10;
 	$scope.offsetP = 1;
 	$scope.arrs = [];
@@ -48,12 +49,11 @@ app.controller('indexCtrl',['$scope','$http','$window','change',function($scope,
 			在detailCtrl中：
 			$scope.datas = data.result.data[change.indexId].content;
 		*/
-
 		// 判断页数
 		$scope.num = 1;
 		var tot = id;
 		while(tot >= 10){
-			tot = tot%10;
+			tot = tot-10;
 			$scope.num++;
 		}
 		$window.location.href = '#/detail/?id=' + id + '&pagesize=' + $scope.offset + '&page=' + $scope.num;
@@ -61,6 +61,8 @@ app.controller('indexCtrl',['$scope','$http','$window','change',function($scope,
 	};
 	$scope.loadMore = function(){
 
+		// 加载显示
+		$scope.loadmore = true;
 		// 每次点击加载更多时就把offset+10
 		// $scope.offset += 10;
 		// 每次点击加载更多时就把offset+1
@@ -73,7 +75,7 @@ app.controller('indexCtrl',['$scope','$http','$window','change',function($scope,
 				page : $scope.offsetP,
 			}
 		}).success(function(data){
-			
+			$scope.loadmore = false;
 			$scope.arrs = $scope.arrs.concat(data.result.data);
 			console.log($scope.arrs);
 			$scope.datas = $scope.arrs;

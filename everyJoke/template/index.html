@@ -13,4 +13,26 @@
             <span class="weui-cell__ft"></span>
         </a>    
     </div>
+    <div ng-show='loadmore' class="load">
+        <!-- 菊花加载 -->
+        <div class="weui-loadmore">
+            <i class="weui-loading"></i>
+            <span class="weui-loadmore__tips">正在加载</span>
+        </div>
+        <div class="weui-loadmore weui-loadmore_line">
+            <span class="weui-loadmore__tips">暂无数据</span>
+        </div>
+        <div class="weui-loadmore weui-loadmore_line weui-loadmore_dot">
+            <span class="weui-loadmore__tips"></span>
+        </div>
+    </div>
 </div>
+<style>
+    
+    .load{
+        width: 100%;
+        height: 100%;
+        background: #000;
+        opacity: 0.5;
+    }
+</style>
