@@ -1,0 +1,16 @@
+<div class="weui-panel weui-panel_access" ng-controller='indexCtrl'>
+    <div class="weui-panel__hd">文字组合列表</div>
+    <div class="weui-panel__bd">
+        <div class="weui-media-box weui-media-box_text" ng-repeat='data in datas' ng-click='click($index)'>
+            <h4 class="weui-media-box__title">第{{$index+1}}个笑话</h4>
+            <p class="weui-media-box__desc">{{datas[$index].content}}</p>
+        </div>
+
+    </div>
+    <div class="weui-panel__ft">
+        <a href="javascript:void(0);" class="weui-cell weui-cell_access weui-cell_link">
+            <div class="weui-cell__bd" ng-click="loadMore()">查看更多</div>
+            <span class="weui-cell__ft"></span>
+        </a>    
+    </div>
+</div>
