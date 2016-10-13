@@ -1,0 +1,153 @@
+<div ng-controller='indexCtrl'>
+	<div class="banner swiper-container">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide">
+				<img src="images/lunbo_1.jpg" alt="">
+			</div>
+			<div class="swiper-slide">
+				<img src="images/lunbo_2.jpg" alt="">
+			</div>
+			<div class="swiper-slide">
+				<img src="images/lunbo_3.jpg" alt="">
+			</div>
+		</div>
+		<!-- 分页器 -->
+		<div class="swiper-pagination"></div>
+	</div>
+	<section>
+		<div class="nav">
+			<!-- <div class="nav_div" ng-repeat='data in datas'>
+				<ul class="nml">
+					<li><a href="javascript:;">{{datas[$index].main1}}</a></li>
+				</ul>
+				<ul>
+					<li><a href="javascript:;">{{datas[$index].main2}}</a></li>
+					<li class="nmb"><a href="javascript:;">{{datas[$index].main21}}</a></li>
+				</ul>
+				<ul>
+					<li><a href="javascript:;">{{datas[$index].main3}}</a></li>
+					<li class="nmb"><a href="javascript:;">{{datas[$index].main31}}</a></li>
+				</ul>
+			</div> -->
+			<div class="nav_div" ng-repeat='data in datas'>
+				<ul class="nml two">
+					<li><a href="javascript:;">{{datas[$index].main1}}</a></li>
+					<li ng-show={{datas[$index].switch}}><a href="javascript:;">{{datas[$index].main11}}</a></li>
+				</ul>
+				<ul>
+					<li><a href="javascript:;">{{datas[$index].main2}}</a></li>
+					<li class="nmb"><a href="javascript:;">{{datas[$index].main21}}</a></li>
+				</ul>
+				<ul>
+					<li><a href="javascript:;">{{datas[$index].main3}}</a></li>
+					<li class="nmb"><a href="javascript:;">{{datas[$index].main31}}</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="nav_dtwo">
+			<a href="javascript:;" ng-repeat='arr in arrs'><span></span>{{arrs[$index]}}</a>
+<!-- 			<a href="javascript:;"><span></span>主题游</a>
+			<a href="javascript:;"><span></span>一日游</a>
+			<a href="javascript:;"><span></span>顶级游</a>
+			<a href="javascript:;"><span></span>酒店+景点</a>
+			<a href="javascript:;"><span></span>亲子.游学</a>
+			<a href="javascript:;"><span></span>外币兑换</a>
+			<a href="javascript:;"><span></span>更多</a> -->
+		</div>	
+		<div class="nav_dthree">
+			<div class="nav_three_tmh">
+				<span>特卖汇</span>
+				<button>领红包再下单<em>&gt;</em></button>
+			</div>
+			<div class="nav_three_con">
+				<div class="nav_three_l">
+					<span class="pic">
+						<img src="images/three_pic1.jpg" alt="">
+					</span>
+				
+					<div class="nav_three_l_msg">
+						<p>乐园游.泰国曼谷+芭提雅7日5晚跟团游(4...)</p>
+						<em>¥</em>
+						<b>1642起</b>
+						<span>3折</span>
+					</div>
+				</div>
+			<div class="nav_three_r">
+				<div class="nav_three_r_1">
+					<a href="javascript:;">
+						<p class="three_r_1_p1">千款特价</p>
+						<p class="three_r_1_p2">走过路过不要错过</p>
+					</a>
+				</div>
+				<div class="nav_three_r_23">
+					<div class="nav_three_r_2">
+					<a href="javascript:;">
+						<p class="three_r_p1">海外精选</p>
+						<p class="three_r_p2"><span>百元</span>出境游</p>
+					</a>
+				</div>
+				<div class="nav_three_r_3">
+					<a href="javascript:;">
+						<p class="three_r_p1">周边玩乐</p>
+						<p class="three_r_p2"><span>十元</span>度周末</p>
+					</a>
+				</div>
+				</div>
+			</div>
+			</div>
+		</div>
+
+		<div class="nav_dfour">
+			<div class="nav_four_rmhd">
+				<span>热门活动</span>
+				<a href="javascipt:;">广告</a>
+				<button>获取更过福利<em>&gt;</em></button>
+			</div>
+			<div class="nav_four_l">
+				<div class="nav_four_lt">
+					<p class="lt_p1">签到领积分</p>
+					<p class="lt_p2">1元游世界</p>
+					<p class="lt_p3">金秋福利大放送</p>
+				</div>
+				<div class="nav_four_lb">
+					<p class="lb_p1">省钱秘籍</p>
+					<p class="lb_p2">优惠券拿到手软</p>
+				</div>
+			</div>
+			<div class="nav_four_r">
+				<div class="nav_four_div1">
+					<p class="div_p1 div_pb">领红包过中秋</p>
+					<p class="div_ps">家是最美目的地</p>
+				</div>
+				<div class="nav_four_div2">
+					<p class="div_p2 div_pb">中秋抢红包</p>
+					<p class="div_ps">100元周边游</p>
+				</div>
+				<div class="nav_four_div3">
+					<p class="div_p3 div_pb">门票特惠</p>
+					<p class="div_ps">今日特价限量抢</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="nav_dfive">
+			<a href="javascript:;">电话预定</a>
+			<a href="javascript:;">下载客户端</a>
+			<a href="javascript:;">我的</a>
+		</div>	
+	</section>
+	<footer>
+		<ul>
+			<a href="javascript:;">
+				<li>网站地图</li>
+			</a>
+			<a href="javascript:;">
+				<li>网站地图</li>
+			</a>
+			<a href="javascript:;">
+				<li>网站地图</li>
+			</a>
+		</ul>
+		<p>&copy;2016携程旅行</p>
+	</footer>
+</div>
