@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>会员登录</title>
+	<link rel="stylesheet" href="../css/login.css">
+	<link rel="stylesheet" href="../css/base.css">
+	<link rel="stylesheet" href="../css/regist.css">
+</head>
+<body>
+<!-- logo -->
+	<div class="logo wrap">
+		<a href="../index.html"><img class="db" src="../images/reginst/logo.jpg" alt=""></a>
+	</div>
+<!-- 登录框 -->
+	<div class="loginbox wrap">
+		<div class = "loginboxl fl">
+			<div class="loginboxl-img">
+				<a href="http://www.banggo.com/brandlist.shtml"><img src="../images/login/loginbox-img.jpg" alt=""/></a>
+			</div>
+			<div class="loginboxl-msg">
+				<p class="login-small">不一样的邦购 不一样的平台 100+时尚买手 海量国际品牌</p>
+				<p class="login-big">全球大搜罗 更时尚的生活态度尽在邦购网</p>
+			</div>
+		</div>
+		<div class = "loginboxr fl">
+			<div class="login-select">
+				<ul>
+					<li class="login-select-li1 selectstyle">账户登录</li>
+					<li class="login-select-li2">手机登录</li>
+					<li class="login-select-li3 ">卡登录</li>
+				</ul>
+			</div>
+			<div class="login-form">
+				<form action="#">
+					<div class="login-name">
+						<span class="login-username db fl">用户名：</span>
+						<input type="text"/>
+						<p class="tip"></p>
+					</div>
+					<div class="login-password">
+						<span class="login-userpassword db fl">登录密码：</span>
+						<input type="password"/>
+						<p class="tip"></p>
+					</div>
+					<div class="login-code">
+						<span  class="login-usercode db fl">验证码：</span>
+						<input class="fl" type="text"/>
+						<p class="login-checkcode fl"><span class="db fl num"></span><span class="codebtn fl">换一张</span></p>
+						<p class="tip"></p>
+					</div>
+					<div class = "login-mulsel">
+						<input class="db fl" type="checkbox" name="remenbername"/>
+						<span class="login-remenbername fl">记住用户名</span>
+						<input class="db fl" type="checkbox" name = "autologin"/>
+						<span class="login-autologin fl">自动登录</span>
+						<button type="button" class="login-loginbtn"><span>登 录</span></button>
+						<a class="login-backpassword" href="#">找回密码?</a>
+					</div>
+				</form>
+			</div>
+			<div class="login-freereg">
+				<p>还不是邦购用户？马上加入吧~~~<button>免费注册</button></p>
+			</div>
+			<div class="login-cooperat">
+				<p>或者使用合作网站登录：</p>
+				<ul>
+					<li><a class="bl" href="#">QQ</a></li>
+					<li><a href="#">支付宝</a></li>
+					<li><a href="#">新浪微博</a></li>
+					<li><a class="bl" href="#">微信</a></li>
+					<li><a href="#">人人网</a></li>
+					<li><a href="#"></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+<!-- 链接 -->
+	<dl class="rellink wrap db">
+		<dt>美特斯邦威集团网站：</dt>
+		<dd><a href="#">美特使邦威</a></dd>
+		<dd><a href="#">ME&CITY</a></dd>
+		<dd><a href="#">CH'IN祺</a></dd>
+		<dd><a href="#">邦购网</a></dd>
+	</dl>
+
+	<script src = "../js/jquery-1.10.2.js"></script>
+	<script src = "../js/login.js"></script>
+	<script src = "../js/checkcode.js"></script>
+	<script src = "../js/Cookies.js"></script>
+	<script src = "../js/judgeCode.js"></script>
+	<script src = "../js/common.js"></script>
+</body>
+</html>

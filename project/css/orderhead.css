@@ -1,0 +1,26 @@
+/*订单头部*/
+.orderhead{
+	height: 96px;
+	border-top:1px solid #dcdcdc;
+	border-bottom: 1px solid #dcdcdc;
+}
+.orderhead-con{
+	height: 96px;
+}
+.orderhead-con .orderhead-con-l{
+	padding-top:12px;
+	width: 194px;
+	height: 52px;
+}
+.orderhead-con .orderhead-con-l img{
+	width: 100%;
+	height: 100%;
+}
+.orderhead-con .orderhead-con-r{
+	width: 400px;
+	height: 30px;
+	background: url(../images/pic.png) no-repeat left top;
+	background-position: 0 -1576px;                                
+	margin-right: 46px;
+	margin-top: 66px;
+}

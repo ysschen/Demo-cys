@@ -1,0 +1,223 @@
+
+.hotmain{
+	height: 980px;
+}
+/*nav*/
+.hotnav{
+	height: 78px;
+	width:1176px;
+	border-bottom:3px solid #000;
+	margin-left:12px;
+}
+.hotnav ul{
+	padding-top:22px;
+}
+.hotnav ul li{
+	float: left;
+}
+.nl{
+	border-right: none !important;
+}
+.hotnav ul li a{
+	display: block;
+	padding:16px 36px 20px 34px;
+	border-right: 2px dotted #5f5f5f;
+	font-size:18px;
+	color:#000;
+	font-weight:bold;
+}
+/*图片*/
+.hotimg{
+	height: 370px;
+	width: 1158px;
+	margin-top: 26px;
+	margin-left: 21px;
+	margin-bottom: 22px;
+}
+.hotimgl{
+	width: 266px;
+	height: 370px;
+}
+.hotimgl img{
+	width: 100%;
+	height: 100%;
+}
+.hotimgc{
+	margin-left: 6px;
+	margin-right: 6px;
+}
+.hotimgc span{
+	width:314px;
+	height: 182px;
+	display: block;
+}
+.hotimgc img{
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+.mb6{
+	margin-bottom: 6px;
+}
+.ml6{
+	margin-left: 6px;
+}
+.mr6{
+	margin-right: 6px;
+}
+.hotimgr-t{
+	width:564px;
+	height: 234px;
+}
+.hotimgr-t span{
+	display: block;
+	float: left;
+	width:184px;
+	height: 234px;
+}
+.hotimgr-b{
+	width:564px;
+	height: 130px;
+}
+.hotimgr-b span{
+	display: block;
+	float: left;
+	width:278px;
+	height: 130px;
+}
+/*logo*/
+.hotlogo{
+	margin-left: 22px;
+	margin-bottom: 18px;
+	position: relative;
+	overflow: hidden;
+}
+.hotlogo .hotlogot li{
+	width: 180px;
+	height: 80px;
+	float: left;
+	border:2px solid #000;
+	margin-right: 8px;
+	margin-bottom: 14px;
+	background: #eee;
+	text-align: center;
+	line-height: 80px;
+
+}
+.hotlogo .hotlogot li a{
+	width: 180px;
+	height: 80px;
+	display: block;
+	text-align: center;
+}
+.hotlogo .hotlogot li a img{
+	vertical-align:middle;
+}
+.location{
+	position: absolute;
+	top:5px;
+	left: 4px;
+	z-index: -99;
+}
+.location li{
+	width: 180px;
+	height: 80px;
+	float: left;
+	border:2px solid #000;
+	margin-right: 8px;
+	margin-bottom: 14px;
+	background: #000;
+}
+/*查看更多品牌*/
+.hotmore{
+	width: 1150px;
+	height: 66px;
+	position: relative;
+}
+.lookmore{
+	width: 1146px;
+	border: 2px solid #000;
+	height: 56px;
+	background: #eee;
+	font-size: 20px;
+	line-height: 56px;
+	font-weight: bold;
+	text-align: center;
+}
+.lookmore a {
+	color: #000;
+}
+.locmore{
+	width: 1150px;
+	height: 60px;
+	background: #000;
+	position: absolute;
+	top:6px;
+	left: 4px;
+	z-index: -99;
+}
+
+/*商品分类隐藏的菜单*/
+.tsort{
+	padding-bottom: 12px;
+	background: url(../images/head-icon5.jpg) no-repeat 18px 0;
+}
+.headb{
+	position: relative;
+}
+.detailnav{
+	width: 224px;
+	height: 518px;
+	padding-top: 8px;
+	border-left:1px solid #dcdcdc;
+	border-right:1px solid #dcdcdc;
+	border-bottom:1px solid #dcdcdc;
+	padding-left:14px;
+	position:absolute;
+	top:60px;
+	left: 0;
+	background: #fff;
+	z-index: 99;
+	display: none;
+}
+.detailnav .dNavDl{
+	height: 72px;
+}
+.detailnav .dNavDl .dNavDt{
+	width: 224px;
+	height: 28px;
+	line-height: 28px;
+	font-size: 14px;
+	color:#000;
+	font-weight: bold;
+}
+.detailnav .dNavDl .dNavDt span{
+	margin-right: 14px;
+	color: #b4b4b4;
+}
+.detailnav .dNavDl .dNavDd{
+	height:22px;
+	float: left;
+	font-size: 12px;
+	color:#000;
+	margin-right: 10px;
+	line-height: 22px;
+}
+.speheight{
+	height: 80px !important;
+}
+.speheight .dNavDt{
+	height: 26px;
+}
+.speheight .dNavDd{
+	height: 26px;
+	line-height: 26px;
+}
+img{
+
+}
+.hotimg img:hover{
+	-webkit-transform:scale(1.1,1.1);
+    -moz-transform:scale(1.1,1.1);
+    -transform:scale(1.1,1.1);
+}
