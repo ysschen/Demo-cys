@@ -1,0 +1,87 @@
+<div ng-controller='indexCtrl'>
+	<nav></nav>
+	<section>
+		<div id = 'new' ng-repeat='data in datas' ng-click='detail($index,data.type)'>
+			<div class="pic"><img ng-src={{data.thumbnail_pic_s}} alt=""></div>
+			<div class="cont">
+				<p>{{data.title}}</p>
+				<span class="span1">{{data.date}}</span>
+				<span class="span2">{{data.author_name}}</span>
+			</div>
+		</div>
+	</section>
+</div>
+<style>
+	header{
+		height: 30px;
+		background:red;
+		text-align: center;
+		line-height: 30px;
+		font-size: 16px;
+		font-weight: bold;
+	}
+	.nav{
+		font-size:14px;
+		width: 100vw;
+		height: 60px;
+		padding:0;
+		margin:0;
+	}
+	.nav li{
+		float: left;
+		width: 20%;
+		border:1px solid #ccc;
+		box-sizing: border-box;
+		background: pink;
+		text-align: center;
+		height: 30px;
+		line-height: 30px;
+	}
+	.nav li:hover{
+		font-size: 18px;
+		font-weight: bold;
+	}
+	#new{
+		height: 120px;
+		width: 100vw;
+		padding-top:10px;
+		padding-bottom: 10px;
+	}
+	.pic{
+		float: left;
+		height: 90%;
+		width: 30%;
+		margin-right: 8px;
+	}
+	.pic img{
+		width: 100%;
+		height: 100%;
+	}
+	.cont{
+		float: left;
+		width: 65%;
+		height: 90%;
+		position: relative;
+	}
+	.cont p{
+		height: 20px;
+		font-size: 16px;
+		line-height: 20px;
+		margin:0;
+	}
+	.cont span{
+		font-size: 14px;
+		height: 16px;
+		line-height: 16px;
+		display: block;
+		float: left;
+		position: absolute;
+		bottom: 0;
+	}
+	.span1{
+		margin-right: 20px;
+	}
+	.span2{
+		right: 0;
+	}
+</style>
