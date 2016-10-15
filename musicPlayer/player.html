@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>播放器</title>
+	<style>
+		*{
+			padding:0;
+			margin:0;
+		}
+		.play{
+			width: 750px;
+			height: 300px;
+			border:1px solid #ccc;
+			overflow: hidden;
+			margin:0 auto;
+			margin-top: 50px;
+		}
+		#main{
+			width: 752px;
+			height: 44px;
+			position: relative;
+			background-color: #2e2e2e;
+			left: 264px;
+			top:-44px;
+		}
+		.btn{
+			height: 40px;
+			width: 100px;
+			line-height: 66px;
+			margin-left: 20px;
+			float: left;
+		}
+		a{
+			text-decoration: none;
+			display: inline-block;
+			width: 20px;
+			height: 20px;
+			border:2px solid #ccc;
+			border-radius: 50%;
+			overflow: hidden;
+			color: #fff;
+			font-weight: bold;
+			text-align: center;
+			line-height: 20px;
+			font-size: 12px;
+		}
+		a:nth-of-type(2){
+			width: 28px;
+			height: 28px;
+			line-height: 28px;
+			border:2px solid #fff;
+		}
+		a:nth-of-type(1),a:nth-of-type(3){
+			position: relative;
+			top:-2px;
+		}
+		#progress{
+			height: 10px;
+			width: 500px;
+			margin-right: 14px;
+			float: left;
+			border:1px solid #454545; 
+			margin-top: 18px;
+			margin-left: 10px;
+			border-radius: 5px;
+			position: relative;
+		}
+		#controlColor{
+			height: 10px;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+		#control{
+			position: absolute;
+			top: -4px;
+			left: 0;
+			display: block;
+			height: 6px;
+			width: 6px;
+			border: 6px solid #fff;
+			background-color: #f00;
+			border-radius: 50%;
+		}
+		#time{
+			display: inline-block;
+			width: 80px;
+			height: 16px;
+			float: left;
+			margin-top: 16px;
+			margin-left: 10px;
+			color: #767676;
+			font-size:12px;
+		}
+	</style>
+</head>
+<body>
+	
+	<!-- 音频 -->
+	<audio controls='controls'>
+		<source src="audio/邓超 - 超级英雄 (《奔跑吧兄弟》真人秀主题曲).mp3">
+	</audio>
+
+	<div class="play">
+		<img src="images/charector.png" alt="">
+	</div>
+	<div id="main">
+		<div class="btn">
+			<a href="javascript:;" id = 'prev'>&lt;&lt;</a>
+			<a href="javascript:;" id = 'begin'>||</a>
+			<a href="javascript:;" id = 'next'>&gt;&gt;</a>
+		</div>
+		<div>
+			<div id="progress">
+				<span id="control"></span>
+				<span id="controlColor"></span>
+			</div>
+			<span id="time">00:00/00:00</span>
+		</div>
+	</div>
+
+	<script>
+		
+		window.onload = function(){
+			player.init();
+		}
+
+		var player = {
+
+			dom : {},
+			arr :[
+				'audio/邓超 - 超级英雄 (《奔跑吧兄弟》真人秀主题曲).mp3',
+				'TFBOYS - 大梦想家.mp3',
+				'金志文 - 夏洛特烦恼.mp3'
+			],
+			index : 0,
+			timer : 0,
+
+			init : function(){
+
+				var obj = this;
+				this.initDom();
+				this.operate();
+				this.control(obj.circle);
+				this.end();
+				this.progress();
+
+			},
+			initDom : function(){
+
+				var dom = this.dom;
+				dom.audio = document.getElementsByTagName('audio')[0];
+				dom.source = document.getElementsByTagName('source')[0];
+				dom.oBegin = document.getElementById('begin');
+				dom.oPrev = document.getElementById('prev');
+				dom.oNext = document.getElementById('next');
+				dom.oTime = document.getElementById('time');
+				dom.oProgress = document.getElementById('progress');
+				dom.oControl = document.getElementById('control');
+				dom.oControlColor = document.getElementById('controlColor');
+				dom.oMain = document.getElementById('main');
+				dom.len = this.arr.length;
+			},
+
+			operate : function(){
+
+				var dom = this.dom;
+				var obj = this;
+				// 播放按钮中|||代表播放，||代表停止
+				dom.oBegin.onclick = function(){
+
+					if(dom.audio.paused){
+						dom.audio.play();
+						dom.oBegin.innerHTML = "|||";
+
+					}else{
+						dom.audio.pause();
+						dom.oBegin.innerHTML = "||";
+					}
+				}
+				// 上一首
+				dom.oPrev.onclick = function(e){
+
+					e = e || event;
+					if(obj.index == 0){
+						alert('当前已经是第一首歌曲了');
+						return ;
+					}else{
+						obj.index--;
+						dom.source.src = 'audio/' + obj.arr[obj.index];
+						dom.audio.load();
+						dom.audio.play();
+					}
+
+				}
+				// 下一首
+				dom.oNext.onclick = function(e){
+
+					e = e || event;
+					if(obj.index == dom.len - 1){
+						alert('当前已经是最后一首歌曲了');
+						return ;
+					}else{
+						obj.index++;
+						dom.source.src = 'audio/' + obj.arr[obj.index];
+						dom.audio.load();
+						dom.audio.play();
+					}
+				}
+			},
+
+			progress : function(){
+
+				var dom = this.dom;
+				var obj = this;
+
+				dom.audio.ontimeupdate = function(){
+
+					// 显示时间
+					var total = dom.audio.duration;
+					var current = dom.audio.currentTime;
+					var totalM = parseInt(total/60);
+					var totalS = parseInt(total%60);
+					var currentM = parseInt(current/60);
+					var currentS = parseInt(current%60);
+					if(currentS <= 9){
+						currentS = ' ' + currentS;
+					}
+					dom.oTime.innerHTML = currentM + '.' + currentS + '/' + totalM + '.' + totalS;
+					dom.oBegin.innerHTML = "|||";
+
+					// 显示比例
+					dom.oControl.style.left =  (current/total) * parseInt(getComputedStyle(dom.oProgress).width) + 'px'; 
+					dom.oControlColor.style.width = (current/total) * parseInt(getComputedStyle(dom.oProgress).width) + 'px'; 
+					dom.oControlColor.style.backgroundColor = '#525157'; 
+				}
+
+				
+			},
+			//点击比例显示按钮
+			control : function(){
+
+				var dom = this.dom;
+				var obj = this;
+
+				var x1 = dom.oProgress.offsetLeft;
+				var x2 = dom.oMain.offsetLeft;
+				var x= x1 + x2;
+
+				dom.oControl.onmousedown = function(e){
+
+					clearInterval(obj.timer);
+					var e = e || event;
+
+					document.onmousemove = function(e){
+
+						var e = e || event;
+						var mx = e.clientX - x;
+						if(mx >= 500){
+							mx = 500;
+						}
+						dom.oControl.style.left = mx + 'px';
+						dom.oControlColor.style.width = mx + 'px';
+						dom.oControlColor.style.backgroundColor = '#525157';						
+					}
+				}
+				document.onmouseup = function(){
+
+					document.onmousemove = null;
+					dom.audio.currentTime = (parseInt(getComputedStyle(dom.oControlColor).width) * dom.audio.duration) / parseInt(getComputedStyle(dom.oProgress).width);	
+					console.log(dom.audio.currentTime);
+
+					setInterval
+			
+				}	
+			},
+
+			circle : function(){
+				var obj = this;
+				var dom = this.dom;
+
+				obj.timer = setInterval(function(){
+					player.progress();
+				},30);
+			},
+
+			end : function(){
+
+				var dom = this.dom;
+				var obj = this;
+				dom.audio.onended = function(){
+					console.log(66);
+					if(obj.index == obj.len - 1){
+						alert('播放至列表中的最后一首歌曲');
+						return ;
+					}else{
+						dom.oNext.onclick();
+					}
+
+					dom.oTime.innerHTML = '00:00';
+
+					// 恢复
+					dom.oBegin.innerHTML = "||";
+					dom.oControl.style.left = 0; 
+					dom.oControlColor.style.width = 0; 
+					dom.oControlColor.style.backgroundColor = 'translate'; 
+				}
+
+				
+			}
+			
+		}
+	</script>
+</body>
+</html>
