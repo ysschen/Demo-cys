@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='turing'>
+<head>
+	<meta charset="UTF-8">
+	<title>turing机器人</title>
+</head>
+<body ng-controller='indexCtrl'>
+	<input type="text" ng-model='txt' ng-change='ask()'>
+	<div>{{data}}</div>
+</body>
+<script src='angular.js'></script>
+<script>
+	var app = angular.module('turing',[]);
+	app.controller('indexCtrl',function($scope,$http){
+		$scope.ask = function(){
+
+			$http.jsonp('http://localhost:8888',{
+				params : {
+					q : $scope.txt,
+					callback : 'JSON_CALLBACK',
+				}
+			}).success(function(data){
+				$scope.data = data.text;
+				console.log(data);
+			});
+			// console.log($scope.txt);
+		}
+		
+	});
+</script>
+</html>
