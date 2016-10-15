@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>加载中..._border+background</title>
+	<style>
+		
+		*{
+			padding:0;
+			margin:0;
+		}
+		div{
+			width: 300px;
+			height: 200px;
+			text-align: center;
+			margin:0 auto;
+			border:1px solid #ccc;
+		}
+		p{
+			width: 200px;
+			height:20px;
+			color:#fff;
+			background: green;
+		}
+		.loading{
+			display: inline-block;
+			width: 10px;
+			min-height: 2px;
+			border-left: 2px solid currentColor;
+			border-right: 2px solid currentColor;
+			/*padding-left: 2px;*/
+			padding-right:2px;
+			box-sizing: border-box;
+			background-color:currentColor;
+			background-clip: content-box;
+
+			-webkit-animation:dot 2s infinite step-start both;
+			animation:dot 2s infinite step-start both;
+
+			*zoom:expression(this.innerHTML = '...');/*for IE7*/
+		}
+		
+		.loading:before{
+			content: '...';
+		}/* for IE8 */
+		.loading::before{
+			content: '';
+		}
+		:root .loading { margin-left: 2px; padding-left: 2px; } /* IE9+ */
+		@-webkit-keyframes dot{
+			25%{
+				/*0个点*/
+				border-color: transparent;
+				background-color: transparent;
+			}
+			50%{
+				/*1个点*/
+				background: transparent;
+				border-right-color:transparent;
+			}
+			75%{
+				/*2个点*/
+				border-right-color:transparent;
+			}
+		}
+		@keyframes dot{
+			25%{
+				/*0个点*/
+				border-color: transparent;
+				background-color: transparent;
+			}
+			50%{
+				/*1个点*/
+				background: transparent;
+				border-right-color:transparent;
+			}
+			75%{
+				/*2个点*/
+				border-right-color:transparent;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<p style = "float:left;margin-top:30px;">订单提交中<span class="loading"></span></p>
+	</div>
+</body>
+</html>

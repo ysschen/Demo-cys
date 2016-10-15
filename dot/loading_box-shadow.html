@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>加载中..._box_shadow</title>
+	<style>
+
+
+		/**
+			
+			使用box-shadow点点点渐进
+
+			缺点：点点会有模糊的阴影
+		
+		*/
+
+		*{
+			padding:0;
+			margin:0;
+		}
+		div{
+			width: 300px;
+			height: 200px;
+			text-align: center;
+			/*line-height: 200px;*/
+			margin:0 auto;
+			border:1px solid #ccc;
+		}
+		p{
+			width: 200px;
+			height:20px;
+			color:#fff;
+			background: green;
+		}
+		.loading{
+			
+			display: inline-block;
+			min-width: 2px;
+			min-height: 2px;
+			box-shadow: 2px 0 0 currentColor,6px 0 0 currentColor,10px 0 0 currentColor;
+			*zoom: expression(this.innerHTML = '...');/*for IE7*/
+
+			animation:dot 2s infinite step-start;
+		}
+		.loading:before{content: '...'}/*for IE8*/
+		.loading::before{content: '';}/*for IE9+ 覆盖 IE8*/
+		:root .loading{margin-right:8px;}
+
+		@-webkit-keyframes dot{
+			25%{
+				box-shadow: none;
+			}
+			50%{
+				box-shadow: 2px 0 0 currentColor;
+			}
+			75%{
+				box-shadow: 2px 0 0 currentColor,6px 0 0 currentColor;
+			}
+		}
+		@keyframes dot{
+			25%{
+				box-shadow: none;
+			}
+			50%{
+				box-shadow: 2px 0 0 currentColor;
+			}
+			75%{
+				box-shadow: 2px 0 0 currentColor,6px 0 0 currentColor;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<p style = "float:left;margin-top:30px;">订单提交中<span class="loading"></span></p>
+	</div>
+</body>
+</html>
