@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>女孩子奔跑</title>
+
+	<style>
+
+		body{
+			/*perspective: 500px;*/
+		}
+		
+		.main{
+			width: 180px;
+			height: 300px;
+			margin:100px auto;
+			overflow: hidden;
+		}
+		#_Img{
+
+			width: 180px;
+			height: 300px;
+			background: url(images/charector.png);
+			background-position: 0 0;
+
+			animation: run 950ms infinite step-end ;
+			/*animation-direction:normal;
+			animation-iteration-count: ;*/
+		}
+		@keyframes run{
+			0%{
+				background-position: 0 0;
+			}
+			14%{
+				background-position: -180px 0;
+			}
+			28%{
+				background-position: -360px 0;
+			}
+			42%{
+				background-position: -540px 0;
+			}
+			56%{
+				background-position: -720px 0;
+			}
+			70%{
+				background-position: -900px 0;
+			}
+			84%{
+				background-position: -1080px 0;
+			}
+			98%{
+				background-position: 0 0;
+			}
+		} 
+		input{
+			border:none;
+			outline: none;
+			background: #ccc;
+			border-radius: 5px;
+			border: 1px solid #000;
+		}
+		input:nth-of-type(1){
+			margin-left: 520px;
+		}
+	</style>
+</head>
+<body>
+	<div class = "main">
+
+		<div id="_Img"></div>
+	</div>
+	<input type="button" value = '开始'>
+	<input type="button" value = '停止'>
+	<input type="button" value = '快速跑'>
+	<input type="button" value = '慢速跑'>
+
+	<script>
+		
+		window.onload = function(){
+
+			var oInput = document.getElementsByTagName('input');
+			var oImg = document.getElementById('_Img');
+
+			// 开始
+			oInput[0].onclick = function(){
+
+				oImg.style.animationIterationCount =  'infinite';
+			}
+			// 停止
+			oInput[1].onclick = function(){
+
+				oImg.style.animationIterationCount = 0;
+				oImg.style.backgroundPosition = '-360px 0';
+			}
+			//快速跑
+			oInput[2].onclick = function(){
+
+				oImg.style.animationDuration =  '700ms';
+			}
+			//慢速跑
+			oInput[3].onclick = function(){
+
+				oImg.style.animationDuration =  '1200ms';
+			}
+		}
+	</script>
+</body>
+</html>
