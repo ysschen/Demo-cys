@@ -1,0 +1,60 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+input {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.box {
+  margin: 50px auto;
+  border: 2px solid #ccc;
+  width: 500px;
+  height: 600px;
+}
+.box header {
+  width: 500px;
+  height: 80px;
+  text-align: center;
+  line-height: 80px;
+  font-size: 40px;
+  background: -webkit-linear-gradient(bottom, #ccc, #fff);
+}
+.box section {
+  width: 498px;
+  height: 416px;
+  border: 1px solid #000;
+}
+.box footer {
+  width: 500px;
+  height: 100px;
+  border-top: 2px solid #ccc;
+  box-shadow: 0 2px 5px #ccc;
+}
+.box footer .input1 {
+  width: 498px;
+  height: 60px;
+  border: 1px solid #000;
+  border-bottom: none;
+}
+.box footer .input2 {
+  width: 500px;
+  height: 40px;
+  border: 1px solid #000;
+  background: -webkit-linear-gradient(top, #ccc, #fff);
+  font-size: 28px;
+  line-height: 40px;
+}
+
+span {
+  background: #ccc;
+  border-radius: 5px;
+  border: 1px solid #000;
+  line-height: 20px;
+  font-size: 18px;
+  display: block;
+  margin: 2px;
+}

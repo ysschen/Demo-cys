@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='chat'>
+<head>
+	<meta charset="UTF-8">
+	<title>图灵对话机</title>
+	<link rel="stylesheet" href="css/turing_chat.css">
+</head>
+<body>
+	<div class="box">
+		<header>图灵智能对话</header>
+		<section></section>
+		<footer>
+			<input type="text" class="input1" ng-controller='send' ng-module='html' ng-keypress='fun()'>
+			<input type="button" value="发送" class="input2" ng-controller='send' ng-click='click()'>
+		</footer>
+	</div>
+	<script src='js/angular.js'></script>
+	<script src='js/turing_chat.js'></script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+*{
+	padding:0;
+	margin:0;
+}
+input{
+	outline: none;
+	border: none;
+}
+.main{
+	width: 228px;
+	height: 322px;
+	background: #70979e;
+	opacity: 0.7;
+	filter: alpha(opacity=70);
+	margin: 50px auto;
+	border:1px solid #000;
+	border-radius: 5px;
+}
+.main .cala{
+	width: 212px;
+	height: 284px;
+	border:1px solid #000;
+	margin:26px auto;
+	background: #e7eff9;
+}
+.main .cala .total{
+	display: block;
+	width: 188px;
+	height: 48px;
+	font-size: 40px;
+	line-height: 68px;
+	border: #000;
+	margin:30px auto 0 auto;
+	border:1px solid #8e9cad;
+	background: -webkit-linear-gradient(top, #e5effa, #fff);
+	text-align: right;
+}
+.main .cala .key{
+	width: 196px;
+	height: 188px;
+	margin: 5px auto;
+}
+.main .cala span{
+	display: block;
+	width: 32px;
+	height: 26px;
+	border: 1px solid #8e9cad;
+	border-radius: 3px;
+	float: left;
+	margin-right: 5px;
+	margin-bottom: 5px;
+	text-align: center;
+	line-height: 26px;
+	font-size: 12px;
+	background: -webkit-linear-gradient(top, #e5effa, #fff);
+	cursor: pointer;
+}
+.main .cala span:hover{
+	background: -webkit-linear-gradient(left, #ffd974, #fff);
+	border:1px solid #ffdb00;
+}
+.mrnone{
+	margin-right: none !important;
+}
+.eql{
+	height: 56px !important;
+	line-height: 56px !important;
+}
+.zero{
+	width: 70px !important;
+}
+.zero,.dot,.add{
+	position: relative;
+	top: -31px;
+}
