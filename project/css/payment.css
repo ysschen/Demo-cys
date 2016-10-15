@@ -1,0 +1,128 @@
+
+/*订单状态*/
+.orderhead-con .orderhead-con-r{
+	background-position: 0 -1636px;
+}
+/*.确认订单信息*/
+.paymsg{
+	height: 738px;
+}
+/*标题*/
+.paymsg-tit{
+	height: 38px;
+	/*line-height: 38px;*/
+	padding-top: 13px;
+}
+.paymsg-tit span{
+	height: 26px;
+	/*margin-top: 13px;*/
+	margin-bottom: 13px;
+	text-indent: 36px;
+	font-size: 12px;
+	color:#000;
+	line-height: 26px;
+	background: url(../images/pic.png) no-repeat left 13px;
+	background-position: 0 -588px;
+}
+/*订单状态*/
+.paymsg-state{
+	height: 244px;
+	width: 1198px;
+	border: 1px solid #ccc;
+	margin-bottom: 14px;
+	position: relative;
+}
+.icon{
+	position: absolute;
+	width: 54px;
+	height: 48px;
+	top:86px;
+	left: 200px;
+	background: url(../images/pic.png) no-repeat left top;
+	background-position: 0 -672px;
+}
+.paymsg-state p{
+	margin-left: 300px;
+}
+/*订单确认倒计时*/
+.paymsg-state-countdown{
+	margin-top: 48px;
+	height: 46px;
+	line-height: 46px;
+	font-size: 16px;
+	font-weight: bold;
+}
+.paymsg-state-countdown span{
+	width: 50px;
+	height: 46px;
+	line-height: 46px;
+	font-size: 16px;
+	font-weight: bold;
+}
+/*订单号*/
+.paymsg-state-amount,.paymsg-state-tip{
+	height: 40px;
+	line-height: 40px;
+	font-size:14px;
+}
+.paymsg-state-amount span,em{
+	/*width: 50px;*/
+	height: 40px;
+	line-height: 40px;
+	font-size: 18px;
+	color: #f00;
+	margin-right: 4px;
+}
+.paymsg-state-amount a span{
+	color: #000;
+	text-decoration: underline;
+}
+/*em{
+	padding:0 4px;
+}*/
+/*支付方式*/
+.paymsg-sel{
+	height: 24px;
+	line-height: 24px;
+	font-size: 12px;
+}
+.paymsg-selbank{
+	height: 42px;
+	line-height: 42px;
+	font-size:  12px;
+	font-weight: bold;
+}
+.paymsg-bank{
+	height: 162px;
+	border-bottom: 1px solid #ccc;
+}
+.paymsg-bank li{
+	width: 140px;
+	float: left;
+	margin-right: 30px;
+	margin-bottom: 20px;
+}
+.paymsg-selplat{
+	height: 38px;
+	line-height: 38px;
+	font-size: 12px;
+	font-weight: bold;
+}
+.paymsg-selplatImg{
+	overflow: hidden;
+}
+.span1{
+	margin-left: 12px;
+	margin-right: 56px;
+}
+.paymsg-paysuccess{
+	height: 62px;
+	line-height: 62px;
+	font-size:12px;
+}
+.paymsg-paysuccess a{
+	text-decoration: underline;
+	font-size:12px;
+	color: #000;
+	margin-left: 6px;
+}

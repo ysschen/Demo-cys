@@ -1,0 +1,63 @@
+/*reset*/
+html,body,div,span,ul,li,a,dl,dt,dd,img,p,button,form,em{
+	padding:0;
+	margin:0;
+}
+ul,li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+input{
+	border: none;
+	outline: none;
+}
+em{
+	font-style: normal;
+}
+/*function*/
+.db{
+	display: block;
+}
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+.wrap{
+	width: 1200px;
+	margin: 0 auto;
+}
+.colorred{
+	color:red !important;
+}
+.mb14{
+	padding-bottom: 14px;
+}
+.mb10{
+	padding-bottom: 10px;
+}
+
+
+/*在线咨询*/
+.inlinechat{
+	width: 52px;
+	height: 44px;
+	position: fixed;
+	right: 20px;
+	bottom:44px;
+	background: url(../images/pic.png) no-repeat top left;
+	background-position: 0 -1003px;
+}
+.backtop{
+	width: 60px;
+	height: 80px;
+	position: fixed;
+	right: 12px;
+	bottom:108px;
+	background: url(../images/pic.png) no-repeat top left;
+	background-position: 0 -1066px;
+	display: none;
+}

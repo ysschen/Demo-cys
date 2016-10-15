@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>购物袋</title>
+	<link rel="stylesheet" href="../css/shopbag.css">
+	<link rel="stylesheet" href="../css/headFoot.css">
+	<link rel="stylesheet" href="../css/headFootDyna.css">
+	<link rel="stylesheet" href="../css/base.css">
+	<link rel="stylesheet" href="../css/orderhead.css">
+</head>
+<body>
+
+<!-- 登录注册 -->
+	<div class = "roof wrap">
+		<span class="wel db fl">欢迎来到邦购网</span>
+		<ul class="rooful fr">
+			<li class="rli1"><a href="../html/login.html">登录</a></li>
+
+				<!-- 登录弹出框 -->
+				<div id="login">
+					<ul>
+						<li><a href="#">QQ账户登录</a></li>
+						<li><a href="#">支付宝登录</a></li>
+						<li><a href="#">微信账户登录</a></li>
+					</ul>
+				</div>
+
+			<li class="rli2"><a href="#">注册</a></li>
+			<li class="rli3"><a href="#">我的邦购</a></li>
+
+				<!-- 我的邦购弹出框 -->
+				<div id="mybg">
+					<ul>
+						<li><a href="#">我的订单</a></li>
+						<li><a href="#">我的积分</a></li>
+						<li><a href="#">我的点赞</a></li>
+						<li><a href="#">收货地址</a></li>
+					</ul>
+				</div>
+
+			<li class="rli4"><a href="#">会员中心</a></li>
+			<li class="rli5"><a href="#">下载APP</a></li>
+
+				<!-- app弹出框 -->
+				<div id="app">
+					<span class="db"><img src="../images/code.jpg" alt=""/></span>
+				</div>
+
+			<li class="rli6"><a href="#">微博</a></li>
+			<li class="rli7"><a href="#">微信</a></li>
+
+				<!-- 微信弹出框 -->
+				<div id="wechatCode">
+					<span class="db"><img src="../images/wechatCode.jpg" alt=""/></span>
+				</div>
+				
+		</ul>
+	</div>
+
+<!-- 头部 -->
+	<div class="orderhead">
+		<div class="orderhead-con wrap">
+			<span class="orderhead-con-l db fl">
+				<img src="../images/logo.jpg" alt="">
+			</span>
+			<span class="orderhead-con-r db fr"></span>
+		</div>
+	</div>
+
+<!-- 购物袋信息 -->
+	<div class="shopbagMain wrap">
+		
+		<div class="shopbagMain-t">
+			<p class="shopbagMain-t-tit">
+				<span class="shopbagMain-t-tit-span1 db fl">我的购物袋</span>
+				<span class="shopbagMain-t-tit-span2 db fr">满99包邮</span>
+			</p>
+			<div class="shopbagMain-t-avtive">
+				<span class="shopbagMain-t-avtive-span1 db fl">已参加活动</span>
+				<p class="fl shopbagMain-t-avtive-p1">全场99元包邮</p>
+			</div>
+			<div class="shopbagMain-t-goods">
+				
+				<ul class="shopbagMain-t-goods-msg">
+					<li class="shopbagMain-t-goods-msg-li1"><input type="checkbox"/></li>
+					<li class="shopbagMain-t-goods-msg-li2">商品信息</li>
+					<li class="shopbagMain-t-goods-msg-li3">颜色尺码</li>
+					<li class="shopbagMain-t-goods-msg-li4">单价(元)</li>
+					<li class="shopbagMain-t-goods-msg-li5">数量</li>
+					<li class="shopbagMain-t-goods-msg-li6">小计</li>
+					<li class="shopbagMain-t-goods-msg-li7">操作</li>
+				</ul>				
+				<!-- <ul class="shopbagMain-t-goods-sel ul1" >
+					<li class="shopbagMain-t-goods-sel-li1"><input type="checkbox"/></li>	
+					<li class="shopbagMain-t-goods-sel-li2">
+						<dl>
+							<dt class="fl db">
+								<span class="shopbagMain-t-goods-sel-li2-img db"><img src="../images/shopbag/shopbag-1.jpg" alt=""></span>
+							</dt>
+							<dd class="mt4">男裤筒微皱干净牛仔长裤</dd>
+							<dd>商品编号：<span>556250</span></dd>
+							<dd>满赠</dd>
+						</dl>
+					</li>
+					<li class="shopbagMain-t-goods-sel-li3">
+						<dl>
+							<dd class="mt10">颜色：<span>灰蓝</span></dd>
+							<dd>尺码：<span>(185/928)</span></dd>
+						</dl>
+					</li>
+					<li class="shopbagMain-t-goods-sel-li4">
+						<em>¥</em><span class="unit-cost">25</span>
+					</li>
+					<li class="shopbagMain-t-goods-sel-li5">
+						<input type="number" value="1">
+					</li>
+					<li class="shopbagMain-t-goods-sel-li6"><em>¥</em><span>25</span></li>
+					<li class="shopbagMain-t-goods-sel-li7">
+						<dl>
+							<dd class="mt10">加入收藏夹</dd>
+							<dd class="del-sel-goods">删除</dd>
+						</dl>
+					</li>
+				</ul> -->
+				<!-- <ul class="shopbagMain-t-goods-sel ul2" >
+					<li class="shopbagMain-t-goods-sel-li1"><input type="checkbox"/></li>	
+					<li class="shopbagMain-t-goods-sel-li2">
+						<dl>
+							<dt class="fl db">
+								<span class="shopbagMain-t-goods-sel-li2-img db"><img src="../images/shopbag/shopbag-1.jpg" alt=""></span>
+							</dt>
+							<dd class="mt4">男裤筒微皱干净牛仔长裤</dd>
+							<dd>商品编号：<span>556250</span></dd>
+							<dd>满赠</dd>
+						</dl>
+					</li>
+					<li class="shopbagMain-t-goods-sel-li3">
+						<dl>
+							<dd class="mt10">颜色：<span>灰蓝</span></dd>
+							<dd>尺码：<span>(185/928)</span></dd>
+						</dl>
+					</li>
+					<li class="shopbagMain-t-goods-sel-li4">
+						<em>¥</em><span class="unit-cost">25</span>
+					</li>
+					<li class="shopbagMain-t-goods-sel-li5">
+						<input type="number" value="1">
+					</li>
+					<li class="shopbagMain-t-goods-sel-li6"><em>¥</em><span>25</span></li>
+					<li class="shopbagMain-t-goods-sel-li7">
+						<dl>
+							<dd class="mt10">加入收藏夹</dd>
+							<dd class="del-sel-goods">删除</dd>
+						</dl>
+					</li>
+				</ul> -->
+				<!-- <ul class="shopbagMain-t-goods-sel ul3" >
+					<li class="shopbagMain-t-goods-sel-li1"><input type="checkbox"/></li>	
+					<li class="shopbagMain-t-goods-sel-li2">
+						<dl>
+							<dt class="fl db">
+								<span class="shopbagMain-t-goods-sel-li2-img db"><img src="../images/shopbag/shopbag-1.jpg" alt=""></span>
+							</dt>
+							<dd class="mt4">男裤筒微皱干净牛仔长裤</dd>
+							<dd>商品编号：<span>556250</span></dd>
+							<dd>满赠</dd>
+						</dl>
+					</li>
+					<li class="shopbagMain-t-goods-sel-li3">
+						<dl>
+							<dd class="mt10">颜色：<span>灰蓝</span></dd>
+							<dd>尺码：<span>(185/928)</span></dd>
+						</dl>
+					</li>
+					<li class="shopbagMain-t-goods-sel-li4">
+						<em>¥</em><span class="unit-cost">25</span>
+					</li>
+					<li class="shopbagMain-t-goods-sel-li5">
+						<input type="number" value="1">
+					</li>
+					<li class="shopbagMain-t-goods-sel-li6"><em>¥</em><span>25</span></li>
+					<li class="shopbagMain-t-goods-sel-li7">
+						<dl>
+							<dd class="mt10">加入收藏夹</dd>
+							<dd class="del-sel-goods">删除</dd>
+						</dl>
+					</li>
+				</ul> -->
+				<!-- <ul class="shopbagMain-t-goods-sel ul4" >
+					<li class="shopbagMain-t-goods-sel-li1"><input type="checkbox"/></li>	
+					<li class="shopbagMain-t-goods-sel-li2">
+						<dl>
+							<dt class="fl db">
+								<span class="shopbagMain-t-goods-sel-li2-img db"><img src="../images/shopbag/shopbag-1.jpg" alt=""></span>
+							</dt>
+							<dd class="mt4">男裤筒微皱干净牛仔长裤</dd>
+							<dd>商品编号：<span>556250</span></dd>
+							<dd>满赠</dd>
+						</dl>
+					</li>
+					<li class="shopbagMain-t-goods-sel-li3">
+						<dl>
+							<dd class="mt10">颜色：<span>灰蓝</span></dd>
+							<dd>尺码：<span>(185/928)</span></dd>
+						</dl>
+					</li>
+					<li class="shopbagMain-t-goods-sel-li4">
+						<em>¥</em><span class="unit-cost">25</span>
+					</li>
+					<li class="shopbagMain-t-goods-sel-li5">
+						<input type="number" value="1">
+					</li>
+					<li class="shopbagMain-t-goods-sel-li6"><em>¥</em><span>25</span></li>
+					<li class="shopbagMain-t-goods-sel-li7">
+						<dl>
+							<dd class="mt10">加入收藏夹</dd>
+							<dd class="del-sel-goods">删除</dd>
+						</dl>
+					</li>
+				</ul> -->
+			</div>
+			<div class="shopbagMain-t-price">
+				<div class="shopbagMain-t-price-left fl">
+					<input class="shopbagMain-t-price-left-input1 fl" type="checkbox"/>
+					<p class="shopbagMain-t-price-left-allsel fl">全选</p>
+					<p class="shopbagMain-t-price-left-somesel fl">删除选中商品</p>
+					<!-- <p class="shopbagMain-t-price-left-novalue fl">清除失效商品</p> -->
+				</div>
+				<div class="shopbagMain-t-price-right fl">
+					<p class="shopbagMain-t-price-right-sel">已选商品<span class="">0</span>件</p>
+					<!-- <p class="shopbagMain-t-price-right-price fl">商品总价：</p><span class="db fl"><em>¥</em>203</span> -->
+					<p class="shopbagMain-t-price-right-total">合计(不含运费)：</p><span class="shopbagMain-t-price-right-totalspan db fl"><em>¥</em>0</span>
+				</div>
+				<span class="shopbagMain-t-price-accountbtn db fr">去结算</span>
+			</div>
+		</div>
+		<div class="shopbagMain-b">
+			<p class="shopbagMain-b-tit">最近浏览的商品</p>
+			<div class="shopbagMain-b-scan fl">
+				<span class="shopbagMain-b-scan-img db"><img src="../images/shopbag/shopbag-2.jpg" alt=""></span>
+				<p class="shopbagMain-b-scan-name">女童-男童tiger休闲运动鞋</p>
+				<span class="shopbagMain-b-scan-nowprice"><em>¥</em>203.00</span>
+				<span class="shopbagMain-b-scan-preprice"><em>¥</em>450.00</span>
+				<button class="shopbagMain-b-scan-addbag fr">加入购物袋</button>
+			</div>
+			<div class="shopbagMain-b-scan fl">
+				<span class="shopbagMain-b-scan-img db"><img src="../images/shopbag/shopbag-3.jpg" alt=""></span>
+				<p class="shopbagMain-b-scan-name">'爱酷'男式宽松潮流半袖男士短袖T恤</p>
+				<span class="shopbagMain-b-scan-nowprice"><em>¥</em>79.00</span>
+				<span class="shopbagMain-b-scan-preprice"><em>¥</em>359.00</span>
+				<button class="shopbagMain-b-scan-addbag fr">加入购物袋</button>
+			</div>
+			<div class="shopbagMain-b-scan fl">
+				<span class="shopbagMain-b-scan-img db"><img src="../images/shopbag/shopbag-4.jpg" alt=""></span>
+				<p class="shopbagMain-b-scan-name">男士收口纯棉休闲七分裤</p>
+				<span class="shopbagMain-b-scan-nowprice"><em>¥</em>69.00</span>
+				<span class="shopbagMain-b-scan-preprice"><em>¥</em>259.00</span>
+				<button class="shopbagMain-b-scan-addbag fr">加入购物袋</button>
+			</div>
+			<div class="shopbagMain-b-scan fl">
+				<span class="shopbagMain-b-scan-img db"><img src="../images/shopbag/shopbag-5.jpg" alt=""></span>
+				<p class="shopbagMain-b-scan-name">'爱酷'男式圆领字母多色简约短袖T恤</p>
+				<span class="shopbagMain-b-scan-nowprice"><em>¥</em>69.00</span>
+				<span class="shopbagMain-b-scan-preprice"><em>¥</em>299.00</span>
+				<button class="shopbagMain-b-scan-addbag fr">加入购物袋</button>
+			</div>
+			<div class="shopbagMain-b-scan fl nonemr">
+				<span class="shopbagMain-b-scan-img db"><img src="../images/shopbag/shopbag-2.jpg" alt=""></span>
+				<p class="shopbagMain-b-scan-name">女童-男童tiger休闲运动鞋</p>
+				<span class="shopbagMain-b-scan-nowprice"><em>¥</em>203.00</span>
+				<span class="shopbagMain-b-scan-preprice"><em>¥</em>450.00</span>
+				<button class="shopbagMain-b-scan-addbag fr">加入购物袋</button>
+			</div>
+
+		<!-- 	<span class="shopbag-pre"></span>
+			<span class="shopbag-next"></span> -->
+		</div>
+	</div>
+
+<!-- 信息链接 -->
+	<div class = 'newlink wrap'>
+		<div class="linklist client bln fl">
+			<span class="listimg db" ><img src="../images/link-1.jpg" alt=""/></span>
+			<span class="span1 db">客户端更多惊喜</span>
+			<span class="span2 db">iPhone、Andriond、iPad下载邦购商城app</span>
+			<span class="span3 db">随时随地 想买就买</span>
+		</div>
+		<div class="linklist weibo fl">
+			<span class="listimg db"><img src="../images/link-2.jpg" alt=""/></span>
+			<span class="span1 db">关注官方微博</span>
+			<span class="span2 db">关注了解官方最新动态</span>
+			<span class="span3 db">为您呈上年轻、时尚、高品质！</span>
+		</div>
+		<div class="linklist wechat fl br">
+			<span class="listimg db"><img src="../images/link-3.jpg" alt=""/></span>
+			<span class="span1 db">关注官方微信</span>
+			<span class="span2 db">超便捷下单抢购</span>
+			<span class="span3 db">购物 新款讯息实时更新</span>
+		</div>
+		<div class="service fl">
+			<div class="servicet">
+				<span class="stSpan1 db">联系方式</span>
+				<span class="stSpan2 db">客服：400 821 9988</span>
+				<span class="stSpan3 db">监督：021-3811999-6038</span>
+			</div>
+			<div class="serviceb">
+				<dl class="fl">
+					<dt><a class="db" href="#"><img src="../images/link-last-1.jpg"></a></dt>
+					<dd class="db">在线客服</dd>
+				</dl>
+				<dl class="fl">
+					<dt><a class="db" href="#"><img src="../images/link-last-2.jpg"></a></dt>
+					<dd class="db"><a class="view" href="#">意见反馈</a></dd>
+				</dl>
+				<dl class="bgnone fl">
+					<dt><a class="db" href="#"><img src="../images/link-last-3.jpg"></a></dt>
+					<dd class="db">问卷调查</dd>
+				</dl>
+			</div>
+		</div>
+	</div>
+<!-- 底部 -->
+	<div class = 'footer'>
+	<div class="foott">
+		<ul class="foottit wrap">
+			<li>新手指南</li>
+			<li>购物指南</li>
+			<li>培送方式</li>
+			<li>支付方式</li>
+			<li>售后服务</li>
+			<li>联系方式</li>
+		</ul>
+	</div>
+	<div class="footb wrap">
+		<ul>
+			<li><a href="#">注册新用户</a></li>
+			<li><a href="#">用户协议</a></li>
+			<li><a href="#">找回去密码</a></li>
+		</ul>
+		<ul>
+			<li><a href="#">红包使用说明</a></li>
+			<li><a href="#">购物流程</a></li>
+			<li><a href="#">订单状态</a></li>
+			<li><a href="#">邦购币绑定与使用</a></li>
+		</ul>
+		<ul>
+			<li><a href="#">配送范围</a></li>
+			<li><a href="#">订单拆分</a></li>
+			<li><a href="#">商品验货与签收</a></li>
+		</ul>
+		<ul>
+			<li><a href="#">发票制度</a></li>
+			<li><a href="#">支付方式</a></li>
+		</ul>
+		<ul>
+			<li><a href="#">退换货政策</a></li>
+			<li><a href="#">退换办理流程</a></li>
+			<li><a href="#">退款说明</a></li>
+		</ul>
+		<ul>
+			<li>客服:400 821 9988</li>
+			<li>监督：021-38119999-6038</li>
+			<li><a href="#">在线客服</a></li>
+			<li><a href="#">用户调研</a></li>
+		</ul>
+	</div>
+	</div>
+<!-- 备注 -->
+	<div class="remarks wrap">
+		<p>CopyRight<span>&copy;</span>2000-2016, 版权所有 上海美特斯邦威服饰股份有限公司 banggo.com 沪ICP备05033127号</p>
+		<span class="remarkimg">
+			<img class="ml438  db fl" src="../images/remark-1.jpg" alt="">
+			<img class="db fl" src="../images/remark-2.jpg" alt="">
+		</span>
+	</div>
+<!-- 回到顶部 -->
+	<div class="backtop"></div>
+<!-- 在线咨询fixd -->
+	<div class="inlinechat"></div>
+
+	<script src="../js/jquery-1.10.2.js"></script>
+	<script src="../js/shopbag.js"></script>
+	<script src="../js/headFoot.js"></script>
+	<script src="../js/base.js"></script>
+	<script src="../js/backTop.js"></script>
+	<script src="../js/Cookies.js"></script>
+</body>
+</html>
