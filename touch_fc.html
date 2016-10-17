@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content='width=device-width,initial-scale=1,user-scalable=no'>
+	<title>Document</title>
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0
+		}
+		#nav{
+			height: 40px;
+			width: 100vw;
+			position: relative;
+			overflow: hidden;
+		}
+		#nav ul{
+			list-style: none;
+			position: absolute;
+			background: #0f0;
+			left: 0;
+
+		}
+		#nav li{
+			box-sizing: border-box;
+			width: 60px;
+			text-align: center;
+			border-right: 1px solid #ccc;
+			line-height: 40px;
+			float: left;
+
+		}
+	</style>
+</head>
+<body>
+	<div id="nav">
+		<ul>
+			<li>推荐</li>
+			<li>热点</li>
+			<li>新闻</li>
+			<li>社会</li>
+			<li>科技</li>
+			<li>美女</li>
+			<li>趣图</li>
+			<li>娱乐</li>
+			<li>社会</li>
+			<li>科技</li>
+			<li>美女</li>
+			<li>趣图</li>
+			<li>娱乐</li>
+			<li>趣图</li>
+			<li>娱乐</li>
+			<li>社会</li>
+			<li>科技</li>
+			<li>美女</li>
+			<li>趣图</li>
+			<li>娱乐</li>
+		</ul>
+	</div>
+</body>
+<script type="text/javascript">
+	var Nav=document.getElementById('nav')
+	var Oul=Nav.getElementsByTagName('ul')[0]
+	var Oli=Oul.getElementsByTagName('li')
+	console.log(Oli[0].offsetWidth)
+	var OliWidth=Oli.length*Oli[0].offsetWidth
+	Oul.style.width=Oli.length*Oli[0].offsetWidth+'px';
+	var obj={}
+	Oul.addEventListener('touchstart',function(data){
+		
+		
+		obj.init=this.offsetLeft
+		obj.start=data.targetTouches[0].pageX
+		console.log(obj.start)
+	})
+	var arr=[]
+	var stu={}
+	Oul.addEventListener('touchmove',function(data){
+	
+		obj.move=data.targetTouches[0].pageX
+		var left=obj.init+obj.move-obj.start
+		if(left>0){
+			left=0
+		}
+		if(left<(320-OliWidth)){
+			left=320-OliWidth
+		}
+		
+		var ord=obj.move
+		
+		var time=data.timeStamp
+		arr.push({
+			ord:obj.move,
+			time:data.timeStamp
+		})
+		Oul.style.left=left+'px'
+		
+	})
+	Oul.addEventListener('touchend',function(data){
+		console.log(arr)
+		console.log('X',arr[arr.length-1].ord-arr[arr.length-2].ord)
+		var speed=(arr[arr.length-1].ord-arr[arr.length-2].ord)*4
+		var Ospeed=Math.abs(speed)
+		var Timer=setInterval(function(){
+			speed=0.9*speed;
+			
+			if(Math.abs(speed)<0.2){
+				speed=0;
+				clearInterval(Timer)
+			}
+			if(Oul.offsetLeft>=0){
+				speed=0;
+
+			}
+			if(Oul.offsetLeft<=-160){
+				speed=0;
+			}
+			Oul.style.left=speed+Oul.offsetLeft+'px';
+		},30)
+		console.log(data.changedTouches[0].pageX)
+		obj.end=data.changedTouches[0].pageX
+	})
+</script>
+</html>

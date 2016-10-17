@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name='viewport' content="width=device-width,initial-scale=1">
+	<title>touch</title>
+	<style>
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		html,body{
+			font-size: 100px;
+		}
+		ul,li{
+			list-style:none;
+		}
+		header{
+			background: red;
+			height: 50px;
+			line-height: 50px;
+			font-size: 18px;
+			text-align: center;
+		}
+		#box{
+			height: 40px;
+			width: 100vw;
+			position: relative;
+			overflow: hidden;
+		}
+		#box ul{	
+			position: absolute;
+			left: 0;
+			height: 40px;
+			width: 10rem;
+		}
+		#box ul li{
+			float: left;
+			width: 0.6rem;
+			border: 1px solid #ccc;
+			box-sizing: border-box;
+			background: pink;
+			text-align: center;
+			line-height: 40px;
+			display: block;
+			font-size: 16px;
+		}
+		#box ul li:hover{
+			font-size: 20px;
+		}
+	</style>
+</head>
+<body>
+	<header>今日头条</header>
+	<div id='box'>
+		<ul class="nav">
+			<li type="top">头条</li>
+			<li type='shehui'>社会</li>
+			<li type='guonei'>国内</li>
+			<li type='guoji'>国际</li>
+			<li type='yule'>娱乐</li>
+			<li type='tiyu'>体育</li>
+			<li type='junshi'>军事</li>
+			<li type='keji'>科技</li>
+			<li type='caijing'>财经</li>
+			<li type='shishang'>时尚</li>
+		</ul>
+	</div>
+	<script>
+		// 自适应
+		(function(win,doc){
+			var docEl = doc.documentElement;
+			resize = function(){
+				var clientWidth = docEl.clientWidth;
+				docEl.style.fontSize = 100 * (clientWidth/320) + 'px'; 
+			}
+			win.addEventListener('resize',resize);
+		})(document,window);
+		function nav(){
+			var dis= 0;
+			var target = 0;//移动的距离
+			var osl = 0;
+			// 设置初始速度
+			var speed = 2;
+			var xStart,xEnd,yStart,yEnd;
+			// 获取ul
+			var oUl = document.getElementsByTagName('ul')[0];
+			// 开始触摸
+			oUl.addEventListener('touchstart',function(data){
+				
+				osl = this.offsetLeft;
+				xStart = data.targetTouches[0].pageX;
+				yStart = data.targetTouches[0].pageY;
+			});
+			// 触摸移动
+			oUl.addEventListener('touchmove',function(data){
+
+			});
+			// 触摸结束
+			oUl.addEventListener('touchend',function(data){
+				xEnd = data.changedTouches[0].pageX;
+				yEnd = data.changedTouches[0].pageY;
+				// 判断
+				if(Math.abs(xStart-xEnd) >= Math.abs(yStart-yEnd)){
+					// 向左或者向右
+					if(xStart >= xEnd){
+						// 向左
+						dis = xStart - xEnd;
+						target = osl - dis;
+						// 移动
+						setInterval(function(){
+							if(target > 0){
+								console.log(oUl.style.left );
+								oUl.style.left = (this.offsetLeft - speed) + 'px';
+								target = target - speed;
+							}else{
+								return ;
+							}
+						},1000);
+					}else{
+						// 向右
+						dis = xEnd - xStart;
+						target = osl + dis;
+						// 移动
+						setInterval(function(){
+							if(target > 0){
+								oUl.style.left = (this.offsetLeft + speed) + 'px';
+								target = target + speed;
+							}else{
+								return ;
+							}	
+						},1000);
+					}
+				}
+			});
+		}
+		nav();
+	</script>
+</body>
+</html>
